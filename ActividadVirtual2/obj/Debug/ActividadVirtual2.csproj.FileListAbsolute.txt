@@ -1,0 +1,6 @@
+C:\Users\Diego Fabian Palacio\ActvidadVirtual2\ActividadVirtual2\obj\Debug\ActividadVirtual2.csprojResolveAssemblyReference.cache
+C:\Users\Diego Fabian Palacio\ActvidadVirtual2\ActividadVirtual2\bin\Debug\ActividadVirtual2.exe.config
+C:\Users\Diego Fabian Palacio\ActvidadVirtual2\ActividadVirtual2\bin\Debug\ActividadVirtual2.exe
+C:\Users\Diego Fabian Palacio\ActvidadVirtual2\ActividadVirtual2\bin\Debug\ActividadVirtual2.pdb
+C:\Users\Diego Fabian Palacio\ActvidadVirtual2\ActividadVirtual2\obj\Debug\ActividadVirtual2.exe
+C:\Users\Diego Fabian Palacio\ActvidadVirtual2\ActividadVirtual2\obj\Debug\ActividadVirtual2.pdb

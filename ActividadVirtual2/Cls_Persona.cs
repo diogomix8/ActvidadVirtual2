@@ -13,15 +13,30 @@ namespace ActividadVirtual2
 	
 	public class Cls_Persona
 	{
+		// Atributos
+		private string nombre;
+		private string apellido;
+		private long dni;
+		private int edad;
+		private long tel;
+		
+		// Constructores
+		/*Inicializa un Objeto vacio*/
 		public Cls_Persona()
 		{
 		}
-	public Cls_Persona(string nom,string apell,long dni,int edad,int tel)//Constructor 2
+		
+		/* Inicializa un Objeto con los parametros dados */
+		public Cls_Persona(string nom,string apell,long dni,int edad,long tel)
 		{
 			this.nombre=nom;
 			this.apellido=apell;
 			this.dni=dni;
 			this.edad=edad;
+			/* Utilizando una Exception */
+//			if(cantidadDigitos(tel)<= 9)
+//				throw new Exception("ERROR: La cantidad de digitos para el TEL tiene que ser <= 9");
+//			this.tel=tel;	
 			Boolean salir=true;
 			do{
 			   if(cantidadDigitos(tel)<= 9)
@@ -29,11 +44,16 @@ namespace ActividadVirtual2
 				this.tel=tel;
 				salir=false;
 			   }
-			   else System.Console.Writeln("ERROR vuelva ingresar un telefono valido...");
-			}while(!salir);
+			   else
+			   {
+			   	Console.WriteLine("ERROR: Vuelva a Ingresar un Telefono Valido...");
+			   	long telfono = Console.Read();
+			   	tel = telfono;
+			   }
+			}while(salir);
 		}
-		//Metodos
 		
+		//Metodos
 		public void setNombre(string nom)
 		{
 			this.nombre=nom;
@@ -70,12 +90,13 @@ namespace ActividadVirtual2
 		{
 			return this.edad;
 		}
-		public  int getTel()
+		public  long getTel()
 		{
 			return this.tel;
 		}
-		public int cantidadDigitos(int valor){
-			int aux=valor,cont=0;
+		public int cantidadDigitos(long valor){
+			long aux=valor;
+			int cont=0;
 			
 			while(aux!=0){
 			    cont++;
@@ -83,3 +104,6 @@ namespace ActividadVirtual2
 			}
 			return cont;
 		}
+	
+	}
+}
