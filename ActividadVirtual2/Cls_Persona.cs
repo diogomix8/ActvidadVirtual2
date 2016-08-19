@@ -22,9 +22,18 @@ namespace ActividadVirtual2
 			this.apellido=apell;
 			this.dni=dni;
 			this.edad=edad;
-			this.tel=tel;
+			Boolean salir=true;
+			do{
+			   if(cantidadDigitos(tel)<= 9)
+			   {
+				this.tel=tel;
+				salir=false;
+			   }
+			   else System.Console.Writeln("ERROR vuelva ingresar un telefono valido...");
+			}while(!salir);
 		}
 		//Metodos
+		
 		public void setNombre(string nom)
 		{
 			this.nombre=nom;
@@ -64,4 +73,13 @@ namespace ActividadVirtual2
 		public  int getTel()
 		{
 			return this.tel;
+		}
+		public int cantidadDigitos(int valor){
+			int aux=valor,cont=0;
+			
+			while(aux!=0){
+			    cont++;
+			    aux=aux/10;
+			}
+			return cont;
 		}
