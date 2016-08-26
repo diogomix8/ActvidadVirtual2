@@ -1,6 +1,12 @@
 ﻿/*
+<<<<<<< HEAD
  * Created by SharpDevelop.
  *
+=======
+ * Miró Morón,Brian-Mogro,Guillermo-Palacio, Diego
+ * Programación C# para WEB
+ * Actividad Virtual 2
+>>>>>>> upstream/master
  */
 using System;
 
@@ -56,10 +62,19 @@ namespace ActividadVirtual2
 		public void transaccion(double cantidad,string tipo){
 			if (tipo == "deposito")
 			{
+<<<<<<< HEAD
 				saldo=saldo+cantidad;
 				Console.WriteLine("***************** DEPOSITO ******************");
 				Console.WriteLine("Cuenta N°: "+getNroCuenta());
 				Console.WriteLine("Apellido y Nombre: "+Propietario.getApellido()+","+Propietario.getNombre());
+=======
+				//saldo=saldo+cantidad;
+				Console.WriteLine("***************** DEPOSITO ******************");
+				Console.WriteLine("Cuenta N°: "+getNroCuenta());
+				Console.WriteLine("Apellido y Nombre: "+Propietario.getApellido()+","+Propietario.getNombre());
+				Console.WriteLine("SALDO : "+getSaldo());
+				setSaldo(getSaldo()+cantidad);
+>>>>>>> upstream/master
 				Console.WriteLine("Cantidad a Depositar: $"+cantidad);
 				Console.WriteLine("Saldo Actual: $"+getSaldo());
 				Console.WriteLine("----EL DEPOSITO SE REALIZO CORRECTAMENTE ----");
@@ -68,10 +83,19 @@ namespace ActividadVirtual2
 			}
 			else if(saldo>cantidad)
 				{
+<<<<<<< HEAD
 					saldo=saldo-cantidad;
 					Console.WriteLine("***************** RETIRO ******************");
 					Console.WriteLine("Cuenta N°: "+getNroCuenta());
 					Console.WriteLine("Apellido y Nombre: "+Propietario.getNombre()+","+Propietario.getApellido());
+=======
+					//saldo=saldo-cantidad;
+					Console.WriteLine("***************** RETIRO ******************");
+					Console.WriteLine("Cuenta N°: "+getNroCuenta());
+					Console.WriteLine("Apellido y Nombre: "+Propietario.getNombre()+","+Propietario.getApellido());
+					Console.WriteLine("SALDO : "+getSaldo());
+					setSaldo(getSaldo()-cantidad);
+>>>>>>> upstream/master
 					Console.WriteLine("Cantidad a Retirar: $"+cantidad);
 					Console.WriteLine("Saldo Actual: $"+getSaldo());
 					Console.WriteLine("----EL EL RETIRO SE REALIZO CORRECTAMENTE ----");
@@ -82,7 +106,12 @@ namespace ActividadVirtual2
 		}
 		public void mostrarSaldo(){
 			Console.WriteLine("******************* SALDO *********************");
+<<<<<<< HEAD
 			Console.WriteLine("Cuenta Numero");
+=======
+			Console.WriteLine("Cuenta Numero :"+getNroCuenta());
+			Console.WriteLine("Saldo :"+getSaldo());
+>>>>>>> upstream/master
 		}
 	}
 }
